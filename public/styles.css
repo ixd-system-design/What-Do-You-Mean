@@ -1,0 +1,125 @@
+body{
+  text-align: center;
+  margin: 0;
+}
+
+main{
+  display: flex;
+  flex-direction: column;
+} 
+
+.brand, .lexicalCategory{
+  font-family: 'BetterTimesRegular'; 
+}
+p, h2,h3,h6,input, button, #word { 
+  font-family: 'CooperBTLight' ; 
+}
+h1.brand{
+  font-size: 4em;
+  font-weight: 900;
+  margin: 0;
+}
+p.tagline{
+  font-size: 1.5rem;
+  font-weight: 100;
+  color: rgb(148,148,0)
+}
+h2{
+  font-size: 3rem;
+}
+header{
+  background: yellow;
+  overflow: hidden;
+  padding: 2rem;
+} 
+form{ 
+  margin: 4rem auto;
+  border-radius: 4rem;
+  padding-left: 1rem;
+  border: 10px solid #ccc;
+  display: flex;  
+} 
+input{  
+  font-size: 2rem;
+  flex-grow: 1;
+  width: 50vw;
+  max-width: 25rem;
+  background: transparent;
+  border: none;
+  padding: 1rem; 
+}
+input:focus {
+  outline: none;
+  background: transparent;
+}
+button{
+  font-size: 2rem;
+  background: transparent;
+  font-weight: 900; 
+  border: none;
+    padding: 1rem 2rem;
+  cursor: pointer;
+}
+
+.lexicalCategory{
+  font-weight: 100;
+}
+.lexicalEntry{
+  max-width: 800px;
+  border: 10px solid #efefef;
+  padding: 2rem;
+  margin: 2rem auto;
+  border-radius: 4rem;
+} 
+
+.lexicalCategory{
+  background: yellow;
+}
+
+.phoneticSpelling{
+  color: #999;
+  font-size: 3rem;
+  line-height: 5rem;
+} 
+
+/* Style the senses / definitions */
+.sense{ 
+  width: 80%;
+  margin: 1rem auto;
+  border-bottom: 2px solid #ddd;
+}
+.sense:last-child{ 
+  border-bottom: none;
+}
+.sense p{
+  font-size: 1.3rem;
+}
+
+
+footer{ 
+ padding: 2rem;
+}
+footer p{
+  max-width: 800px;
+  color: #666;
+  margin: 1rem auto;
+}
+footer img{
+  width: 200px;
+}
+
+
+/* Style the text selection colors */
+::selection {
+  color: white;
+  background: rgb(255,64,129) /* WebKit  */
+}
+::-moz-selection {
+  color: white;
+  background: rgb(255,64,129); /* Gecko  */
+}
+
+.ideal{
+  font-weight: bold;
+  color: green;
+}
