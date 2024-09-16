@@ -1,4 +1,4 @@
-# Oxford Dicitonary API Demo
+# Oxford Dictionary API Demo
 [![Open in Coder](https://ixdcoder.com/open-in-coder.svg)](https://ixdcoder.com/templates/Node/workspace?name=Oxford&mode=auto&param.git_repo=https://bender.sheridanc.on.ca/system-design/oxford)
 
 ## Context
