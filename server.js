@@ -2,8 +2,7 @@
 // import fetch from 'node-fetch';   
 import express from 'express';
 
-const app = express();                   // initialize express
-app.use(express.json());               // enable JSON parsing in express
+const app = express();                   // initialize express 
 
 // Serve static files from /public folder (useful when running Node locally, optional on Vercel).
 app.use(express.static('public'))
