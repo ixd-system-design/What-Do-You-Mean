@@ -1,56 +1,91 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
-  <title>Dictionary</title> 
+  <title>Dictionary</title>
 
   <!-- Setting a viewport tag helps with mobile device layout. -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
   <!-- CooperBTBlack, CooperBTLight, CooperBTLightItalic ,
-  BetterTimesRegular via Monotype --> 
-  <link href="https://cdn.fonts.net/kit/1b6a6d30-8398-11ec-9ce3-0220834439f4/1b6a6d30-8398-11ec-9ce3-0220834439f4.css" rel="stylesheet" />
-  
-  <!-- Custom Styling -->
-  <link href="styles.css" rel="stylesheet" /> 
-  <script defer src="script.js" ></script>
+  BetterTimesRegular via Monotype -->
+  <link
+    href="https://cdn.fonts.net/kit/1b6a6d30-8398-11ec-9ce3-0220834439f4/1b6a6d30-8398-11ec-9ce3-0220834439f4.css"
+    rel="stylesheet"
+  />
 
-    <!-- Use a Yellow Base64 Pixel as Favicon. -->
-   <link href="data:image/x-icon;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8/5/hPwAIAgL/4d1j8wAAAABJRU5ErkJggg==
-" rel="icon" type="image/x-icon">
-  
+  <!-- Custom Styling -->
+  <link
+    href="styles.css"
+    rel="stylesheet"
+  />
+  <script
+    defer
+    src="script.js"
+  ></script>
+
+  <!-- Use a Yellow Base64 Pixel as Favicon. -->
+  <link
+    href="data:image/x-icon;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8/5/hPwAIAgL/4d1j8wAAAABJRU5ErkJggg==
+"
+    rel="icon"
+    type="image/x-icon"
+  >
+
 
 </head>
+
 <body>
 
- <main>    
+  <main>
 
-    <header> 
-      <h1 class="brand">WHAT DO YOU MEAN?</h1>   
+    <header>
+      <h1 class="brand">WHAT DO YOU MEAN?</h1>
       <p class="tagline">Words, well defined.</p>
-    </header>  
-   
-     <form id="searchForm" autocomplete="off">    
-      <input id="searchText" placeholder="Apple" type="text">
+    </header>
+
+    <form
+      id="searchForm"
+      autocomplete="off"
+    >
+      <input
+        id="searchText"
+        placeholder="Apple"
+        type="text"
+      >
       <button aria-label="Search">&#128269;</button>
-       <!-- I'm using an emoji as a search icon here, but you could also opt for an SVG -->
+      <!-- I'm using an emoji as a search icon here, but you could also opt for an SVG -->
     </form>
-   
+
     <section id="results">
       <!-- JavaScript will add results here dynamically. -->
     </section>
 
-</main>
- <footer id="credits">
-    <p>
-  <a href="https://developer.oxforddictionaries.com/"><img src="oxford.png"></a></p>
-  
-  <p>This is a demo page to fetch and display data from the <a href="https://developer.oxforddictionaries.com/">Oxford Dictionaries API</a> via a NodeJS backend. This iteration also uses NodeJS as a relay to satisfy the requirements of <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS">Cross Origin Resource Sharing (CORS)</a>. NodeJS takes care of both the frontend and the backend via a framework called <a href="https://expressjs.com">Express</a>. For the backend API, We use Express to create a search endpoint for relaying requests. For the frontend, We also use Express library to serve up a public folder of <a href="https://expressjs.com/en/starter/static-files.html">static assets</a>. </p>
-  <p><span class="ideal">We use Environment Variables to safely store API Keys on the NodeJS Server. </span></p>
-      
-  <p>Created by <a href="https://nsitu.ca">Harold Sikkema</a> in the context of Systems Design in the <a href="https://ixd.sheridancollege.ca/program.html">Interaction Design</a> program at <a href="https://www.sheridancollege.ca/">Sheridan College.</a>  Fonts via <a href="https://enterprise.monotype.com/">Monotype</a>. Thanks to  <a href="https://developer.oxforddictionaries.com/">Oxford Dictionaries</a> for all the words. 
-  </p> 
-  
-</footer> 
+  </main>
+  <footer id="credits">
+    <p>This demo displays word definitions by fetching data from the the <a
+        href="https://developer.oxforddictionaries.com/"
+      >Oxford Dictionaries API</a>. The API has great data, but lacks headers to allow <a
+        href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS"
+      >Cross Origin Resource Sharing (CORS)</a>. As such we cannot call it directly from frontend JavaScript. We
+      therefore use NodeJS <a href="https://expressjs.com">Express</a> server as a relay to call the Oxford API on
+      behalf of the frontend. You can <a
+        href="https://www.figma.com/board/y67IupAudMyeBCjnXwIema/Cross-Origin-Resource-Sharing"
+      >read more about CORS on this FigJam</a>.</p>
+
+    <p>Created by <a href="https://nsitu.ca">Harold Sikkema</a> in the context of Systems Design in the <a
+        href="https://ixd.sheridancollege.ca/program.html"
+      >Interaction Design</a> program at <a href="https://www.sheridancollege.ca/">Sheridan College.</a> Fonts via <a
+        href="https://enterprise.monotype.com/"
+      >Monotype</a>. Thanks to <a href="https://developer.oxforddictionaries.com/">Oxford Dictionaries</a> for all the
+      words.
+    </p>
+
+  </footer>
 </body>
+
 </html>
