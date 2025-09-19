@@ -5,9 +5,10 @@ import express from 'express';
 const app = express();                   // initialize express
 app.use(express.json());               // enable JSON parsing in express
 
-// Tell Express to serve up our frontend
-// See also: https://expressjs.com/en/starter/static-files.html
-app.use('/', express.static('public'))
+// Serve static files from /public folder (useful when running Node locally, optional on Vercel).
+app.use(express.static('public'))
+// Define index.html as the root explicitly (useful on Vercel, optional when running Node locally).
+app.get('/', (req, res) => { res.redirect('/index.html') })
 
 // Create a backend endpoint to listen for requests from the frontend
 app.get('/search/:word', (req, res) => {
